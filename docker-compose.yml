@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: ./backend
+    container_name: smh-cheerful-api
+    ports:
+      - "8000:8000"
+    environment:
+      - MODEL_NAME=sentence-transformers/all-MiniLM-L6-v2
+
+  frontend:
+    build: ./frontend
+    container_name: smh-cheerful-ui
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend

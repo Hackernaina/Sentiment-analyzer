@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+backend/artifacts/*.pt
+backend/artifacts/*.pkl
+backend/artifacts/*.joblib
